@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+  <title>Schedule</title>
+</head>
+<body>
+  <div id="user-info" style="text-align: center; margin-bottom: 20px; font-weight: bold;"></div>
+  <h1>Class Scheduling Form</h1>
+  <div class="container">
+    <div class="left-panel" id="form-panel">
+      <form id="schedule-form">
+        <h2>Room & Course Info</h2>
+        <label for="room-type">Room Type:</label>
+        <select id="room-type" required>
+          <option value="">-- Select Room --</option>
+          <option>Regular Room</option>
+          <option>Computer Lab</option>
+          <option>HRS Lab</option>
+          <option>Welding Lab</option>
+        </select>
+
+        <label for="student">Course / Section:</label>
+        <select id="student" required>
+          <option value="">-- Select Section --</option>
+          <option>BSIS/ACT</option>
+          <option>HRS</option>
+          <option>SMAW</option>
+        </select>
+
+        <h2>Program Info</h2>
+        <label for="faculty">Program Name:</label>
+        <input type="text" id="faculty" placeholder="Enter Faculty Name" required />
+
+        <label for="employment">Day:</label>
+        <select id="employment" required>
+          <option value="">-- Select Day --</option>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+        </select>
+
+        <label for="start-time">Shift Start Time:</label>
+        <input type="time" id="start-time" required />
+
+        <label for="end-time">Shift End Time:</label>
+        <input type="time" id="end-time" required />
+
+        <h2>Subject Info</h2>
+        <label for="cluster">Subjects / Cluster Handled:</label>
+        <select id="cluster" required>
+          <option value="">-- Select Subject --</option>
+          <option>Computer Programming 2</option>
+          <option>Human Computer Interaction</option>
+          <option>Web Development</option>
+          <option>Object Oriented Programming</option>
+          <option>Fundamentals of Information Systems</option>
+          <option>Physical Education</option>
+          <option>National Service Training Program</option>
+          <option>Housekeeping NC II</option>
+          <option>Food and Beverage Services NC II</option>
+          <option>Cookery NC II</option>
+          <option>Shielded Metal Arc Welding NC I</option>
+          <option>Shielded Metal Arc Welding NC II</option>
+        </select>
+
+        <label for="units">Units:</label>
+        <input type="number" id="units" placeholder="Enter Units" required />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="right-panel">
+      <h2>Saved Schedule Table</h2>
+      <table id="schedule-table">
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Course</th>
+            <th>Room</th>
+            <th>Time</th>
+            <th>Shift</th>
+            <th>Units</th>
+            <th>Subject</th>
+            <th>Saved By</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- lalabas yung mga na saved na schedule -->
+        </tbody>
+      </table>
+      <button id="logout-button">Log Out</button>
+    </div>
+  </div>
+</body>
+</html>
